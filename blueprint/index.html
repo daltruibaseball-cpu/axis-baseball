@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Blueprint: One-on-one hitting that improves performance—better swing, better pitch selection, clearer approach. Get a plan built for your game.">
+  <title>The Blueprint — Better Swing. Better At-Bats.</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Blueprint — Better Swing. Better At-Bats.">
+  <meta property="og:description" content="One-on-one hitting built for results: improved performance, better swing decisions, and a clear approach at the plate.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Blueprint — Better Swing. Better At-Bats.">
+  <style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg-dark:#0f1419;--bg-card:#1a2332;--text:#e6edf3;--text-muted:#8b9cad;--accent:#d4a853;--accent-hover:#e4bc5c;--white:#fff;--border:#2d3a4a}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.6;color:var(--text);background:var(--bg-dark);overflow-x:hidden}
+  .container{max-width:1100px;margin:0 auto;padding:0 20px}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:transparent;transition:background .25s ease,box-shadow .25s ease}
+  .nav.scrolled{background:rgba(15,20,25,.95);box-shadow:0 2px 12px rgba(0,0,0,.3)}
+  .nav .container{display:flex;justify-content:space-between;align-items:center;padding:1rem 20px}
+  .nav-brand{font-weight:700;font-size:1.25rem;color:var(--white);letter-spacing:.02em}
+  .nav-cta{display:inline-block;padding:.6rem 1.4rem;background:var(--accent);color:var(--bg-dark);font-weight:600;text-decoration:none;border-radius:6px;transition:background .2s,transform .2s}
+  .nav-cta:hover{background:var(--accent-hover);color:var(--bg-dark);transform:translateY(-1px)}
+  .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:6rem 1.5rem 4rem;position:relative}
+  .hero::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg, var(--bg-dark) 0%, #1a2332 50%, var(--bg-dark) 100%);z-index:0}
+  .hero .container{position:relative;z-index:1}
+  .hero-eyebrow{display:inline-block;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+  .hero-title{font-size:clamp(2.25rem,5vw,3.5rem);font-weight:800;line-height:1.15;margin-bottom:1rem;color:var(--white)}
+  .hero-subtitle{font-size:1.2rem;color:var(--text-muted);max-width:560px;margin:0 auto 2rem;line-height:1.6}
+  .btn-cta{display:inline-block;padding:1rem 2rem;background:var(--accent);color:var(--bg-dark);font-weight:700;font-size:1.1rem;text-decoration:none;border-radius:8px;border:none;cursor:pointer;transition:background .2s,transform .2s}
+  .btn-cta:hover{background:var(--accent-hover);transform:translateY(-2px)}
+  .hero-risk{margin-top:1.25rem;font-size:.9rem;color:var(--text-muted)}
+  @media (max-width:768px){.hero{min-height:100vh;padding:5rem 1.25rem 3rem}.nav-cta{padding:.5rem 1.1rem;font-size:.9rem}}
+  @media (max-width:480px){.hero{padding:4.5rem 1rem 2.5rem}}
+  </style>
+  <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="container">
+      <span class="nav-brand">The Blueprint</span>
+      <button type="button" class="nav-cta" id="nav-cta">Get Started</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container">
+        <p class="hero-eyebrow">One-on-One Hitting</p>
+        <h1 class="hero-title"><span class="hero-title-line">Better Swing.</span> <span class="hero-title-line">Better Decisions.</span> <span class="hero-title-line">Better At-Bats.</span></h1>
+        <p class="hero-subtitle">Direct coaching, clear feedback, and an approach that actually translates to the box.</p>
+        <button type="button" class="btn-cta" id="hero-cta">Join The Blueprint</button>
+        <p class="hero-risk">Start with a free 15–20 min call. No commitment—we'll see if it's a fit.</p>
+      </div>
+    </section>
+
+    <section class="stats-bar" aria-label="Program at a glance">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat">
+            <span class="stat-value" data-value="50">50+</span>
+            <span class="stat-label">Players trained</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">1:1</span>
+            <span class="stat-label">Coaching</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Custom plans</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-proof" id="proof">
+      <div class="container">
+        <h2 class="section-title">Athlete Results</h2>
+        <p class="section-subtitle">Real feedback from hitters in the program.</p>
+        <div class="testimonials">
+          <div class="testimonial-card">
+            <blockquote class="testimonial-quote">"Finally had a plan that made sense for my swing. My approach at the plate completely changed."</blockquote>
+            <p class="testimonial-attribution">— Travel ball, 16U</p>
+          </div>
+          <div class="testimonial-card">
+            <blockquote class="testimonial-quote">"No fluff — every session had a clear focus. I knew exactly what to work on between meetings."</blockquote>
+            <p class="testimonial-attribution">— High school varsity</p>
+          </div>
+          <div class="testimonial-card">
+            <blockquote class="testimonial-quote">"The video breakdowns made it click. First time I actually understood what I was doing wrong and how to fix it."</blockquote>
+            <p class="testimonial-attribution">— College prep</p>
+          </div>
+        </div>
+        <p class="proof-note">Improved performance comes from a plan built for you—your level, your goals, your schedule.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="what-you-get">
+      <div class="container">
+        <h2 class="section-title">What Changes</h2>
+        <p class="section-subtitle">The outcomes you get from a plan built around you.</p>
+        <div class="card-grid">
+          <div class="card">
+            <h3>More Consistent Swing</h3>
+            <p>Mechanics and timing that hold up under pressure. Drills and feedback tailored to your swing, not a template.</p>
+          </div>
+          <div class="card">
+            <h3>Better Pitch Selection</h3>
+            <p>Clearer approach and better decisions in the box. You'll know what to look for and when to let it go.</p>
+          </div>
+          <div class="card">
+            <h3>Confidence That Carries</h3>
+            <p>An approach you can trust. Support between sessions so you stay on track and keep building.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="container">
+        <h2 class="section-title">Why This Gets Results</h2>
+        <p class="section-subtitle">Not another generic program. This is how we get you to better performance.</p>
+        <div class="why-grid">
+          <div class="why-item">
+            <span class="why-icon" aria-hidden="true">1</span>
+            <h3>Built around you</h3>
+            <p>Your plan is based on your swing, your goals, and your schedule—so the work actually translates to your at-bats.</p>
+          </div>
+          <div class="why-item">
+            <span class="why-icon" aria-hidden="true">2</span>
+            <h3>Clear next steps</h3>
+            <p>You always know what to work on and why. No guessing—progress you can see and feel.</p>
+          </div>
+          <div class="why-item">
+            <span class="why-icon" aria-hidden="true">3</span>
+            <h3>Direct access</h3>
+            <p>One coach, consistent feedback. No rotating staff or crowded groups—just you and a path to better performance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="who">
+      <div class="container">
+        <h2 class="section-title">Who This Is For</h2>
+        <p class="section-subtitle">The right fit matters.</p>
+        <div class="two-col">
+          <div class="card">
+            <h3>Good fit if you…</h3>
+            <ul class="list list-check">
+              <li>Want a swing and approach built for you, not a one-size-fits-all program</li>
+              <li>Are ready to put in the work and show up consistently</li>
+              <li>Prefer direct coaching and clear next steps</li>
+              <li>Want to know exactly what to work on and why</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Not a fit if…</h3>
+            <ul class="list list-cross">
+              <li>You're looking for a quick fix with no follow-through</li>
+              <li>You're not willing to do the work between sessions</li>
+              <li>You prefer generic drills with no personal feedback</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt hidden" id="how">
+      <div class="container">
+        <h2 class="section-title">How You Get There</h2>
+        <p class="section-subtitle">From where you are now to better swing and better at-bats.</p>
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">1</span>
+            <h3>Start the conversation</h3>
+            <p>We'll talk about your goals and where you're at. From there we map out whether this is the right fit.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">2</span>
+            <h3>Assessment</h3>
+            <p>We look at your swing and approach so your plan is built on what you actually need to improve.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">3</span>
+            <h3>Your plan, your results</h3>
+            <p>You get a clear plan and we get started. Sessions and support built to get you performing better.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How do I get better results at the plate?</summary>
+            <p>You get a plan built for your swing and your goals—direct coaching, video feedback, and clear next steps. We start with a conversation to see where you are and whether this is the right fit. No pressure.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is this in-person or remote?</summary>
+            <p>We can do both. Many hitters use video and remote sessions; in-person is an option where available. We'll figure out what works for you.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How often are sessions?</summary>
+            <p>Frequency is based on your schedule and goals. We'll set a rhythm that you can actually stick to so you see progress.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I get started?</summary>
+            <p>Choose a time for a free call. We'll talk through your goals and next steps. After that, you'll get a confirmation and we'll take it from there.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta" id="final-cta">
+      <div class="container">
+        <h2 class="section-title">Get the Swing and Approach You're Capable Of</h2>
+        <p class="section-subtitle">Start with a free call—we'll map out your plan and see if it's a fit.</p>
+        <button type="button" class="btn-cta btn-cta-large" id="final-cta-btn">Join The Blueprint</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-copy">&copy; <span id="year"></span> The Blueprint. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="booking-modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-box">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <div id="calendly-embed" class="calendly-embed"></div>
+    </div>
+  </div>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="script.js"></script>
+</body>
+</html>

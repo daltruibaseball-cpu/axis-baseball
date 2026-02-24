@@ -1,0 +1,720 @@
+/* The Blueprint — One-on-One Hitting Landing Page */
+
+:root {
+  --bg-dark: #0f1419;
+  --bg-card: #1a2332;
+  --text: #e6edf3;
+  --text-muted: #8b9cad;
+  --accent: #d4a853;
+  --accent-hover: #e4bc5c;
+  --white: #fff;
+  --border: #2d3a4a;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --transition: 0.2s ease;
+}
+
+/* Base */
+.hidden {
+  display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg-dark);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Nav */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav.scrolled {
+  background: rgba(15, 20, 25, 0.95);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 20px;
+}
+
+.nav-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+
+.nav-cta {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: var(--accent);
+  color: var(--bg-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition), color var(--transition);
+}
+
+.nav-cta:hover {
+  background: var(--accent-hover);
+  color: var(--bg-dark);
+  transform: translateY(-1px);
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 1.5rem 4rem;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, var(--bg-dark) 0%, #1a2332 50%, var(--bg-dark) 100%);
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--accent);
+  color: var(--bg-dark);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-cta:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn-cta-large {
+  padding: 1.1rem 2.2rem;
+  font-size: 1.15rem;
+}
+
+.hero-risk {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Stats bar */
+.stats-bar {
+  padding: 2.5rem 0;
+  background: rgba(26, 35, 50, 0.6);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 2rem 10rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-value {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  background: rgba(26, 35, 50, 0.5);
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+}
+
+/* Social proof */
+.section-proof {
+  padding: 4rem 0;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: 0.75rem;
+  left: 1.25rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: 0.4;
+  line-height: 1;
+}
+
+.testimonial-quote {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.65;
+  margin-bottom: 0.75rem;
+  padding-left: 1rem;
+}
+
+.testimonial-attribution {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding-left: 1rem;
+}
+
+.proof-note {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Why The Blueprint */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.why-item {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.why-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: rgba(212, 168, 83, 0.15);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.why-item h3 {
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.why-item p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  padding: 3rem 0 2rem;
+  background: rgba(15, 20, 25, 0.8);
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 0.25rem;
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.footer-cta {
+  margin-bottom: 0.5rem;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  border-color: rgba(212, 168, 83, 0.3);
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Two column (Who it's for) */
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li {
+  padding: 0.4rem 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.list-check li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.list-cross li::before {
+  content: '✕';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+/* Steps (How it works) */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--accent);
+  color: var(--bg-dark);
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* FAQ */
+.faq-list {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  padding: 1.1rem 1.25rem;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  color: var(--accent);
+  font-size: 1.25rem;
+  transition: transform var(--transition);
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  padding: 0 1.25rem 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+  padding-top: 1rem;
+}
+
+/* Final CTA section */
+.section-cta {
+  text-align: center;
+  padding: 4.5rem 0;
+}
+
+.section-cta .section-subtitle {
+  margin-bottom: 1.5rem;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.modal-box {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  z-index: 10;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: color var(--transition), background var(--transition);
+}
+
+.modal-close:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.calendly-embed {
+  flex: 1;
+  min-height: 630px;
+  height: 75vh;
+  width: 100%;
+  padding: 0;
+}
+
+.calendly-inline-widget {
+  min-width: 320px;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 630px;
+}
+
+.calendly-embed iframe {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 630px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+    padding: 5rem 1.25rem 3rem;
+    justify-content: center;
+  }
+
+  .hero .container {
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.1rem, 7vw, 2.75rem);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-title-line {
+    display: block;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .hero-risk {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .nav-cta {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Stats bar below the fold on mobile; center-align stats */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .stat {
+    align-items: center;
+  }
+
+  .stats-bar {
+    padding: 2rem 0;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section-cta {
+    padding: 3rem 0;
+  }
+
+  .footer {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .modal-box {
+    max-height: 90vh;
+  }
+
+  .calendly-embed {
+    min-height: 580px;
+    height: 80vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4.5rem 1rem 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.95rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .btn-cta {
+    padding: 0.9rem 1.6rem;
+    font-size: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+}

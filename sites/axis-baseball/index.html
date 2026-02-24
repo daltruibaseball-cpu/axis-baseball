@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional baseball training for athletes of all levels. Choose from hitting &amp; defense, 1-on-1 coaching, or strength &amp; conditioning programs at AXIS Player Development.">
+    <title>AXIS Player Development | Professional Coaching</title>
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://axisbaseball.com/index.html">
+    <meta property="og:title" content="AXIS Player Development | Professional Coaching">
+    <meta property="og:description" content="Professional baseball training for athletes of all levels. Choose from hitting &amp; defense, 1-on-1 coaching, or strength &amp; conditioning programs at AXIS Player Development.">
+    <meta property="og:image" content="https://axisbaseball.com/assets/Home_Share.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="AXIS Player Development">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AXIS Player Development | Professional Coaching">
+    <meta name="twitter:description" content="Professional baseball training for athletes of all levels. Hitting, Defense, Lifting, and More.">
+    <meta name="twitter:image" content="https://axisbaseball.com/assets/Home_Share.png">
+    <link rel="icon" type="image/webp" href="assets/Favicon.webp">
+    <style>/* Critical above-the-fold: hero, nav, logos. Rest in styles.css (preloaded). */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary-color:#1a5195;--secondary-color:#ff6b35;--accent-color:#f4a261;--dark-color:#1a1a1a;--light-color:#f8f9fa;--text-color:#333;--text-light:#666;--white:#ffffff;--shadow:0 4px 6px rgba(0,0,0,0.1);--shadow-lg:0 10px 30px rgba(0,0,0,0.15)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.6;color:var(--text-color);overflow-x:hidden}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.navbar{position:fixed;top:0;width:100%;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;z-index:1000;transition:all .3s ease}
+.navbar.darkened{background:rgba(18,46,80,.75);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.navbar .container{display:flex;justify-content:space-between;align-items:center;padding:1rem 20px}
+.nav-brand{display:flex;align-items:center;justify-content:center;gap:.75rem;height:100%}
+.nav-logo-link,.nav-logo-wrap{display:inline-block;text-decoration:none}
+.nav-logo-link{cursor:pointer}
+.nav-logo{height:auto;width:auto;max-height:60px;object-fit:contain;display:block}
+.nav-btn-primary{background:var(--white);color:var(--primary-color);padding:.5rem 1.5rem;border-radius:5px;text-decoration:none;font-weight:600;transition:all .3s ease;display:flex;align-items:center}
+@media (hover:hover){.nav-btn-primary:hover{background:var(--white);color:var(--secondary-color);transform:translateY(-2px);box-shadow:0 4px 8px rgba(255,107,53,.2)}}
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;color:var(--white);overflow:hidden;padding-top:80px}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:url('assets/players-background.webp');background-size:cover;background-position:center center;background-repeat:no-repeat;filter:blur(5px);z-index:-1;transform:translateZ(0);backface-visibility:hidden}
+.hero-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(4,18,34,.75) 0%,rgba(33,75,126,.75) 100%);z-index:0}
+.hero-content{position:relative;z-index:1;max-width:800px;margin:0 auto;padding:3rem 20px 2rem;text-align:center}
+.hero-title{font-size:3.5rem;font-weight:700;margin-bottom:1rem;animation:fadeInUp 1s ease}
+.hero-subtitle{font-size:1.5rem;margin-bottom:2rem;opacity:.95;animation:fadeInUp 1s ease .2s both}
+.hero-pathways{position:relative;z-index:1;padding:3rem 0 5rem;background:transparent}
+.pathways-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2.5rem;margin-top:.5rem;max-width:1200px;margin-left:auto;margin-right:auto}
+.pathway-card{background:var(--white);padding:2.5rem;border-radius:15px;box-shadow:0 8px 25px rgba(0,0,0,.2);transition:opacity .6s ease,transform .6s ease,box-shadow .3s ease,border-color .3s ease;text-align:center;border:3px solid transparent;position:relative;display:flex;flex-direction:column;color:var(--text-color);backface-visibility:hidden;opacity:0;transform:translateY(20px)}
+.pathway-card.animate-in{opacity:1;transform:translateY(0)}
+.pathway-card.pathway-featured{transform:scale(1.1) translateY(20px)}
+.pathway-card.pathway-featured.animate-in{transform:scale(1.1) translateY(0)}
+.pathway-card.pathway-featured{border-color:transparent;border-width:4px;background:linear-gradient(135deg,#f8f9ff 0%,#e8f0ff 100%);box-shadow:0 12px 35px rgba(26,81,149,.25),0 0 20px rgba(255,107,53,.3),0 0 40px rgba(255,107,53,.15),0 0 0 1px rgba(26,81,149,.1);position:relative;padding:3rem 2.5rem;min-height:auto;z-index:1}
+.pathway-card.pathway-featured::before{content:'';position:absolute;top:-4px;left:-4px;right:-4px;bottom:-4px;background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));border-radius:19px;z-index:-1;opacity:.3;filter:blur(8px)}
+.pathway-icon{font-size:3.5rem;margin-bottom:1rem}
+.pathway-card h3{font-size:1.5rem;margin-bottom:.5rem;color:var(--primary-color)}
+.pathway-tag{display:block;background:var(--primary-color);color:var(--white);padding:.5rem 1rem;border-radius:25px;font-size:.9rem;font-weight:600;margin-bottom:1rem;width:100%;text-align:center}
+.pathway-featured .pathway-tag{background:var(--secondary-color)}
+.pathway-card p:not(.pathway-tag){color:var(--text-light);line-height:1.8;margin-bottom:1.5rem;flex-grow:1}
+.pathway-see-more{display:block;background:transparent;border:2px solid var(--primary-color);color:var(--primary-color);padding:.5rem 1rem;border-radius:5px;font-size:.9rem;font-weight:600;cursor:pointer;margin:.5rem 0 1rem;width:100%;text-align:center;transition:all .3s ease}
+.pathway-card:not(.pathway-featured) .pathway-see-more{display:none}
+.pathway-card.pathway-featured .pathway-see-more{display:block}
+.pathway-features{list-style:none;text-align:left;margin-bottom:2rem;flex-grow:1}
+.pathway-features li{color:var(--text-color);padding:.5rem 0;font-size:.95rem}
+.pathway-btn{margin-top:auto;width:100%;text-align:center}
+.pathway-featured .pathway-btn{background:var(--secondary-color);color:var(--white)}
+.btn{display:inline-block;padding:1rem 2rem;text-decoration:none;border-radius:5px;font-weight:600;transition:all .3s ease;border:none;cursor:pointer;font-size:1rem}
+.btn-primary{background:var(--primary-color);color:var(--white)}
+.footer{background:var(--dark-color);color:var(--white);padding:3rem 0 1rem}
+.footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem}
+.footer-logo{height:auto;width:auto;max-height:60px;object-fit:contain;margin-bottom:1rem;display:block}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+html{scroll-behavior:smooth}
+.lp-hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:3.5rem 0 2.5rem;padding-top:80px;color:var(--white);overflow-x:hidden}
+.lp-hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:url('assets/Dumbbells.avif');background-size:cover;background-position:center center;background-repeat:no-repeat;filter:blur(5px);z-index:-1;transform:translateZ(0);backface-visibility:hidden}
+.lp-hero-coaching::before{background-image:url('assets/Coaching.webp')}
+.lp-hero-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(4,18,34,.75) 0%,rgba(33,75,126,.75) 100%);z-index:0}
+.lp-hero-content{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:3rem 1rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:1.5rem}
+.lp-hero-content .lp-title{color:var(--white);margin-bottom:0}
+.lp-hero-content .lp-subtitle{color:rgba(255,255,255,.95);margin-bottom:0;max-width:700px}
+.lp-eyebrow{display:inline-block;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem;color:var(--primary-color);margin-bottom:.75rem}
+.lp-title{color:var(--dark-color);font-size:3rem;line-height:1.1;margin-bottom:.75rem}
+.lp-subtitle{color:var(--text-light);font-size:1.25rem;line-height:1.5}
+@media (max-width:768px){.nav-logo{max-height:45px}.nav-btn-primary{padding:.5rem 1.25rem;font-size:.9rem;-webkit-tap-highlight-color:transparent}.nav-btn-primary:active,.nav-btn-primary:focus,.nav-btn-primary:visited{color:var(--primary-color);background:var(--white)}.hero{padding-top:70px;min-height:auto}.hero-content{padding:4rem 20px 1.5rem}.hero-title{font-size:2.5rem}.hero-subtitle{font-size:1.2rem;margin-bottom:1rem}.hero-pathways{padding:1rem 0 3rem}.pathways-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;padding:0 .75rem}.pathway-card.pathway-featured{order:-1}.pathway-card{padding:2rem 1.75rem;margin:0;min-height:auto}.pathway-card.pathway-featured{transform:translateY(20px)!important;border-width:3px;border-color:var(--secondary-color)}.pathway-card.pathway-featured.animate-in{transform:translateY(0)!important}.pathway-icon{font-size:2.75rem;margin-bottom:1rem}.pathway-card h3{font-size:1.35rem;margin-bottom:.75rem}.pathway-tag{padding:.4rem 1.25rem;font-size:.9rem;margin-bottom:1.25rem}.pathway-features{max-height:0;overflow:hidden;opacity:0;margin-bottom:0}.pathway-features.expanded{max-height:500px;margin-bottom:1.75rem;opacity:1}.pathway-btn{padding:1rem 1.5rem;font-size:1rem;min-height:48px;display:flex;align-items:center;justify-content:center}}
+@media (max-width:480px){.nav-logo{max-height:40px}.hero{min-height:100vh}.hero-content{padding:3.5rem 20px 1.25rem}.hero-title{font-size:2rem}.hero-subtitle{font-size:1rem;margin-bottom:.75rem}.pathways-grid{gap:1.75rem;padding:0 .5rem}.pathway-card.pathway-featured{order:-1;transform:translateY(20px)!important;border-color:var(--secondary-color)}.pathway-card.pathway-featured.animate-in{transform:translateY(0)!important}.pathway-card{padding:1.75rem 1.5rem}.pathway-icon{font-size:2.5rem;margin-bottom:.875rem}.pathway-card h3{font-size:1.25rem;margin-bottom:.625rem}.pathway-tag{padding:.35rem 1.1rem;font-size:.85rem}.pathway-features{max-height:0;overflow:hidden;opacity:0;margin-bottom:0}.pathway-features.expanded{max-height:500px;margin-bottom:1.5rem;opacity:1}.pathway-btn{padding:.95rem 1.4rem;font-size:.95rem;min-height:44px}}</style>
+    <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+<!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '24600999412865738');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=24600999412865738&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" id="nav-logo-link" class="nav-logo-link">
+                    <img src="assets/Logo.webp" alt="AXIS Player Development" class="nav-logo">
+                </a>
+            </div>
+            <a href="#contact" class="nav-btn-primary">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Integrated Pathways -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Choose Your Path to Better Baseball</h1>
+                <p class="hero-subtitle">Select the training program that fits your goals and budget</p>
+            </div>
+        </div>
+        <div class="hero-pathways">
+            <div class="container">
+                <div class="pathways-grid">
+                    <div class="pathway-card" data-pathway="hitting-defense">
+                        <div class="pathway-icon">🎯</div>
+                        <h3>Hitting & Defense</h3>
+                        <p class="pathway-tag">Online Programs</p>
+                        <p>Master your craft in the cage and on the field with our skill development programs.</p>
+                        <button class="pathway-see-more" aria-expanded="false">See More</button>
+                        <ul class="pathway-features">
+                            <li>✓ Expert instruction</li>
+                            <li>✓ Skill-specific drills</li>
+                            <li>✓ On-demand video library</li>
+                            <li>✓ Personalized routine building</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary pathway-btn" data-select="hitting-defense">Browse Programs</a>
+                    </div>
+                    <div class="pathway-card pathway-featured" data-pathway="one-on-one">
+                        <div class="pathway-icon">⭐</div>
+                        <h3>1-on-1 Coaching</h3>
+                        <p class="pathway-tag">Premium Training</p>
+                        <p>1-on-1, expert mentorship and personalized training tailored to your unique goals.</p>
+                        <ul class="pathway-features">
+                            <li>✓ One-on-one coaching</li>
+                            <li>✓ Fully customized training plan</li>
+                            <li>✓ Flexible training schedule</li>
+                            <li>✓ 24/7 athlete support</li>
+                        </ul>
+                        <button class="pathway-see-more pathway-learn-more" aria-expanded="false">Learn More</button>
+                        <a href="#contact" class="btn btn-primary pathway-btn" data-select="one-on-one">Apply Now</a>
+                    </div>
+                    <div class="pathway-card" data-pathway="strength-conditioning">
+                        <div class="pathway-icon">💪</div>
+                        <h3>Strength & Conditioning</h3>
+                        <p class="pathway-tag">Online Programs</p>
+                        <p>Build strength, power, and resiliency with our strength and conditioning programs.</p>
+                        <button class="pathway-see-more" aria-expanded="false">See More</button>
+                        <ul class="pathway-features">
+                            <li>✓ Science based training</li>
+                            <li>✓ Sport-specific movements</li>
+                            <li>✓ Strength & power based workouts</li>
+                            <li>✓ Personalized program design</li>
+                        </ul>
+                        <a href="pages/strength-conditioning-programs.html" class="btn btn-primary pathway-btn">Browse Programs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section id="trust" class="trust">
+        <div class="container">
+            <div class="trust-content">
+                <h2 class="section-title">Why Athletes Choose Us</h2>
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <h3>Proven Results</h3>
+                        <p>Experienced coaches with a track record of success</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <h3>Flexible Programs</h3>
+                        <p>Options that fit your schedule and budget</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">✓</div>
+                        <h3>Personalized Training</h3>
+                        <p>Customized plans tailored to your specific needs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <p class="section-subtitle">Hear from our athletes</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The training program transformed my hitting. I increased my batting average by 50 points in just one season!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Mike Johnson</strong>
+                        <span>College Player</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The pitching coaches helped me add 5 mph to my fastball and improved my control significantly. Highly recommend!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Sarah Martinez</strong>
+                        <span>High School Player</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Professional coaching, great facilities, and a supportive environment. This is the best investment I've made in my baseball career."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>David Chen</strong>
+                        <span>Youth Player</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section: Get Started Quiz + Inline Booking -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Apply for 1-on-1 Coaching</h2>
+            <p class="section-subtitle">Get Personalized Training and Expert Mentorship.</p>
+
+            <!-- Hidden form for Netlify (quiz data submitted via JS) -->
+            <form name="get-started-quiz" id="get-started-quiz-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display: none;">
+                <input type="hidden" name="form-name" value="get-started-quiz" />
+                <p>
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+            </form>
+
+            <div class="get-started-content">
+                <!-- Quiz wrapper: one question at a time -->
+                <div id="quiz-wrapper" class="quiz-wrapper">
+                    <div class="quiz-progress" aria-hidden="true">
+                        <span class="quiz-progress-text" id="quiz-progress-text">1 of 6</span>
+                        <div class="quiz-progress-bar"><span class="quiz-progress-fill" id="quiz-progress-fill"></span></div>
+                    </div>
+
+                    <div class="quiz-slide" data-step="1" id="quiz-slide-1">
+                        <h3 class="quiz-question">Are you an athlete or a parent?</h3>
+                        <div class="quiz-options">
+                            <button type="button" class="quiz-option" data-value="athlete">Athlete</button>
+                            <button type="button" class="quiz-option" data-value="parent">Parent</button>
+                        </div>
+                        <div class="quiz-nav">
+                            <button type="button" class="btn btn-primary quiz-next">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-slide" data-step="2" id="quiz-slide-2" hidden>
+                        <h3 class="quiz-question" id="q2-label">What is the athlete's level of play?</h3>
+                        <div class="quiz-options">
+                            <button type="button" class="quiz-option" data-value="youth">Youth</button>
+                            <button type="button" class="quiz-option" data-value="high-school">High School</button>
+                            <button type="button" class="quiz-option" data-value="college">College</button>
+                            <button type="button" class="quiz-option" data-value="pro">Pro</button>
+                        </div>
+                        <div class="quiz-nav">
+                            <button type="button" class="btn btn-secondary quiz-back">Back</button>
+                            <button type="button" class="btn btn-primary quiz-next">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-slide" data-step="3" id="quiz-slide-3" hidden>
+                        <h3 class="quiz-question" id="q3-label">What do you want to work on?</h3>
+                        <p class="quiz-multi-hint">Select all that apply.</p>
+                        <div class="quiz-options quiz-options-multi">
+                            <button type="button" class="quiz-option" data-value="hitting">Hitting</button>
+                            <button type="button" class="quiz-option" data-value="strength-conditioning">Strength & Conditioning</button>
+                            <button type="button" class="quiz-option" data-value="mental-training">Mental Training</button>
+                            <button type="button" class="quiz-option" data-value="recruiting">Recruiting</button>
+                        </div>
+                        <div class="quiz-nav">
+                            <button type="button" class="btn btn-secondary quiz-back">Back</button>
+                            <button type="button" class="btn btn-primary quiz-next">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-slide" data-step="4" id="quiz-slide-4" hidden>
+                        <h3 class="quiz-question" id="q5-label">How ready are you to commit to training?</h3>
+                        <div class="quiz-options">
+                            <button type="button" class="quiz-option" data-value="very-ready">Very Ready</button>
+                            <button type="button" class="quiz-option" data-value="somewhat-ready">Somewhat Ready</button>
+                            <button type="button" class="quiz-option" data-value="need-to-learn-more">Need to learn more</button>
+                        </div>
+                        <div class="quiz-nav">
+                            <button type="button" class="btn btn-secondary quiz-back">Back</button>
+                            <button type="button" class="btn btn-primary quiz-next">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-slide" data-step="5" id="quiz-slide-5" hidden>
+                        <h3 class="quiz-question">You're almost finished! Where can we reach you?</h3>
+                        <div class="quiz-fields">
+                            <div class="form-group">
+                                <label for="quiz-name" id="quiz-name-label">Your name</label>
+                                <input type="text" id="quiz-name" name="name" placeholder="Your name" required autocomplete="name">
+                            </div>
+                            <div class="form-group quiz-athlete-name-wrap" id="quiz-athlete-name-wrap" hidden>
+                                <label for="quiz-athlete-name">Athlete's name</label>
+                                <input type="text" id="quiz-athlete-name" name="athlete-name" placeholder="Athlete's name" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="quiz-email">Email</label>
+                                <input type="email" id="quiz-email" name="email" placeholder="Email" required autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="quiz-phone">Phone</label>
+                                <input type="tel" id="quiz-phone" name="phone" placeholder="Phone" autocomplete="tel">
+                            </div>
+                        </div>
+                        <div class="quiz-nav">
+                            <button type="button" class="btn btn-secondary quiz-back">Back</button>
+                            <button type="button" class="btn btn-primary quiz-next" id="quiz-next-step5">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-slide quiz-slide-calendar" data-step="6" id="quiz-slide-6" hidden>
+                        <h3 class="quiz-question quiz-step-label">Schedule Your Call</h3>
+                        <p class="quiz-calendar-intro">Choose a time below to book your 1-on-1 session.</p>
+                        <div class="quiz-booking-iframe-wrap" id="quiz-calendly-container">
+                            <!-- Calendly widget injected here via JS with prefill (name, email, phone) -->
+                        </div>
+                        <p class="quiz-booking-contact">Having issues or the times don't work for your schedule? Contact us at <a href="mailto:contact@axisbaseball.com">contact@axisbaseball.com</a>.</p>
+                        <div class="quiz-nav">
+                            <button type="button" class="btn btn-secondary quiz-back">Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/Logo.webp" alt="AXIS Player Development" class="footer-logo">
+                    <p>Professional baseball training for athletes of all levels.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AXIS Player Development. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Free Program Popup -->
+    <div id="free-program-popup" class="popup-overlay">
+        <div class="popup-modal">
+            <button class="popup-close" id="popup-close">&times;</button>
+            <div class="popup-content">
+                <h2 class="popup-title">Get Your Free Training Program</h2>
+                <p class="popup-subtitle">Stay Explosive In-Season</p>
+                <p class="popup-description">A low-volume power primer for baseball players to build more pop on the field. 15-25 minutes, 2-4x per week, no barbell required.</p>
+                <form class="popup-form" id="popup-form" name="popup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="popup" />
+                    <p style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+                    <input 
+                        type="text" 
+                        name="name" 
+                        placeholder="Your Name" 
+                        required 
+                        class="popup-input"
+                    />
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Your Email" 
+                        required 
+                        class="popup-input"
+                    />
+                    <input 
+                        type="tel" 
+                        name="phone" 
+                        placeholder="Phone Number" 
+                        class="popup-input"
+                    />
+                    <button type="submit" class="btn btn-primary popup-btn" style="display: block; width: 100%; margin: 0 auto; text-align: center;">Get Free Program</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
