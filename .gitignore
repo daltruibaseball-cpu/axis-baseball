@@ -1,25 +1,5 @@
-# Dependencies
-node_modules/
-
-# Environment / secrets (never commit keys)
-.env
-.env.local
-.env.*.local
-
-# OS
 .DS_Store
-Thumbs.db
-
-# Editor / IDE
-.cursor/
-.idea/
-*.swp
-*.swo
-*~
-
-# Netlify
-.netlify/
-
-# Logs
+node_modules/
+.env
 *.log
-npm-debug.log*
+.netlify

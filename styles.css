@@ -43,7 +43,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../assets/Dumbbells.avif');
+    background-image: url('Dumbbells.avif');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -54,7 +54,7 @@
 }
 
 .lp-hero-coaching::before {
-    background-image: url('../assets/Coaching.webp');
+    background-image: url('Coaching.webp');
 }
 
 .lp-hero-overlay {
@@ -783,7 +783,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../assets/players-background.webp');
+    background-image: url('Players Background.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
