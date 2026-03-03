@@ -1,9 +1,0 @@
-{
-  "name": "baseball-training",
-  "version": "1.0.0",
-  "description": "AXIS Player Development - Baseball Training Programs",
-  "scripts": { "build": "echo OK" },
-  "dependencies": {
-    "stripe": "^14.10.0"
-  }
-}
